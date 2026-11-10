@@ -11,13 +11,13 @@
 <meta property="og:locale" content="es_CO">
 
 <title>Energía Peñuela</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20aria-hidden%3D%22true%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22lg%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23F2A472%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23B85A22%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%2213%22%20fill%3D%22url(%23lg)%22%2F%3E%3Cpath%20d%3D%22M24%2036.5C14.5%2030%2010.5%2025.2%2010.5%2020.2c0-3.9%203-6.8%206.6-6.8%202.7%200%205.1%201.5%206.9%204%201.8-2.5%204.2-4%206.9-4%203.6%200%206.6%202.9%206.6%206.8%200%205-4%209.8-13.5%2016.3z%22%20fill%3D%22%23fff%22%20fill-opacity%3D%22.95%22%2F%3E%3Cpath%20d%3D%22M24%2033c-5.6-4-8-7-8-10.3%200-1.9%201.4-3.3%203.1-3.3%201.8%200%203.5%201.3%204.9%203.7%201.4-2.4%203.1-3.7%204.9-3.7%201.7%200%203.1%201.4%203.1%203.3%200%203.3-2.4%206.3-8%2010.3z%22%20fill%3D%22%23C4672F%22%20fill-opacity%3D%22.22%22%2F%3E%3C%2Fsvg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20aria-hidden%3D%22true%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22lg%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%236D64F5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%233730B8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%2213%22%20fill%3D%22url(%23lg)%22%2F%3E%3Cpath%20d%3D%22M24%2036.5C14.5%2030%2010.5%2025.2%2010.5%2020.2c0-3.9%203-6.8%206.6-6.8%202.7%200%205.1%201.5%206.9%204%201.8-2.5%204.2-4%206.9-4%203.6%200%206.6%202.9%206.6%206.8%200%205-4%209.8-13.5%2016.3z%22%20fill%3D%22%23fff%22%20fill-opacity%3D%22.95%22%2F%3E%3Cpath%20d%3D%22M24%2033c-5.6-4-8-7-8-10.3%200-1.9%201.4-3.3%203.1-3.3%201.8%200%203.5%201.3%204.9%203.7%201.4-2.4%203.1-3.7%204.9-3.7%201.7%200%203.1%201.4%203.1%203.3%200%203.3-2.4%206.3-8%2010.3z%22%20fill%3D%22%233730B8%22%20fill-opacity%3D%22.22%22%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
 /* Tipografías de la plantilla de David: Sora (títulos), Manrope (texto), IBM Plex Mono (cifras y etiquetas).
-   Dos temas, cada uno ligado a una opción de nombre: «noche» (oscuro azulado de la plantilla con acento cobre) y «alba» (claro y cálido). */
+   Tema «noche»: el oscuro azulado y el índigo (#8B93F8 / #5B52F0) que David usa en todas sus apps. */
 :root{
   --f-cuerpo:'Manrope',system-ui,'Segoe UI',Roboto,sans-serif;
   --f-titulo:'Sora','Segoe UI',system-ui,sans-serif;
@@ -26,11 +26,11 @@
 }
 :root[data-tema=noche]{
   --bg:#0A0C14; --bg2:#10131F; --panel:#141826; --suave:#1A1F31; --ink:#F6F1EC; --muted:#A5A9BC; --dim:#7B8096; --line:#252B42;
-  --acc:#E8956A; --acc-ink:#1D0F07; --acc-soft:#3A2418; --acc2:#F2C27B;
-  --grad:linear-gradient(135deg,#F2A472 0%,#C4672F 100%);
-  --halo:radial-gradient(60% 50% at 50% 0%,rgba(232,149,106,.22),rgba(10,12,20,0) 70%);
+  --acc:#8B93F8; --acc-ink:#FFFFFF; --acc-soft:#232850; --acc2:#B7BCFB;
+  --grad:linear-gradient(140deg,#5B52F0 0%,#3730B8 100%);
+  --halo:radial-gradient(60% 50% at 50% 0%,rgba(139,147,248,.24),rgba(10,12,20,0) 70%);
   --ok:#5EE6A0; --ok-soft:#123324; --warn:#F5B14C; --warn-soft:#2D2410; --bad:#F68A8A; --bad-soft:#3A1A1E;
-  --vidrio:#2A3050; --agua:#E8956A; --agua2:#F6C79F;
+  --vidrio:#2A3050; --agua:#5B52F0; --agua2:#9AA1FA;
   --sombra:0 10px 30px rgba(0,0,0,.35);
   color-scheme:dark;
 }
@@ -109,7 +109,7 @@ small,.peq{font-size:13px;color:var(--muted)}
 .btn{font:inherit;font-weight:700;border:1px solid var(--line);background:var(--suave);color:var(--ink);padding:11px 18px;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;line-height:1.2;min-height:44px}
 .btn:hover{border-color:var(--acc)}
 .btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--acc2);outline-offset:2px}
-.btn.primario{background:var(--grad);color:var(--acc-ink);border-color:transparent;box-shadow:0 6px 18px rgba(196,103,47,.35)}
+.btn.primario{background:var(--grad);color:var(--acc-ink);border-color:transparent;box-shadow:0 6px 18px rgba(91,82,240,.4)}
 .btn.primario:hover{filter:brightness(1.06)}
 .btn.grande{width:100%;font-size:17px;padding:14px 18px}
 .btn.peq{padding:7px 12px;font-size:13.5px;min-height:34px;border-radius:10px}
@@ -191,8 +191,8 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
 </div>
 <noscript><p style="padding:20px">Esta página necesita JavaScript activado para funcionar.</p></noscript>
 <script>
-/* Energía Peñuela — familia — versión 1.0 — construida el 2026-11-09 */
-const BUILD = {"modo":"nube","opcion":"A","opcionPorUrl":false,"firebase":{"apiKey":"AIzaSyAd6TZipDlbLp9m9llAcfUg4AHhjSGkOAg","authDomain":"energia-penuela.firebaseapp.com","projectId":"energia-penuela","storageBucket":"energia-penuela.firebasestorage.app","messagingSenderId":"202230602280","appId":"1:202230602280:web:d1532cff515d28e56c331d"},"sitio":"https://davidp0220.github.io/energia-penuela/","version":"1.0","fecha":"2026-11-09"};
+/* Energía Peñuela — familia — versión 1.0 — construida el 2026-11-10 */
+const BUILD = {"modo":"nube","opcion":"A","opcionPorUrl":false,"firebase":{"apiKey":"AIzaSyAd6TZipDlbLp9m9llAcfUg4AHhjSGkOAg","authDomain":"energia-penuela.firebaseapp.com","projectId":"energia-penuela","storageBucket":"energia-penuela.firebasestorage.app","messagingSenderId":"202230602280","appId":"1:202230602280:web:d1532cff515d28e56c331d"},"sitio":"https://davidp0220.github.io/energia-penuela/","version":"1.0","fecha":"2026-11-10"};
 /* Opciones de nombre y aspecto (David escoge con el ojo). El constructor define BUILD antes de este archivo:
    BUILD = { modo:'local'|'nube', opcion:'A'|'B', opcionPorUrl:bool, firebase:{...}|null, sitio:'https://…/', version, fecha }.
    Nada personal va aquí: la historia, el nombre de Nonita, las cuentas de pago y los aportes viven en la base de datos, no en el código. */
@@ -208,7 +208,7 @@ const CONFIG = (() => {
   return Object.assign({ opcion, modo: BUILD.modo, firebase: BUILD.firebase, sitio: BUILD.sitio, version: BUILD.version, fecha: BUILD.fecha }, o);
 })();
 
-const LOGO_SVG = '<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2A472"/><stop offset="1" stop-color="#B85A22"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#lg)"/><path d="M24 36.5C14.5 30 10.5 25.2 10.5 20.2c0-3.9 3-6.8 6.6-6.8 2.7 0 5.1 1.5 6.9 4 1.8-2.5 4.2-4 6.9-4 3.6 0 6.6 2.9 6.6 6.8 0 5-4 9.8-13.5 16.3z" fill="#fff" fill-opacity=".95"/><path d="M24 33c-5.6-4-8-7-8-10.3 0-1.9 1.4-3.3 3.1-3.3 1.8 0 3.5 1.3 4.9 3.7 1.4-2.4 3.1-3.7 4.9-3.7 1.7 0 3.1 1.4 3.1 3.3 0 3.3-2.4 6.3-8 10.3z" fill="#C4672F" fill-opacity=".22"/></svg>';
+const LOGO_SVG = '<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6D64F5"/><stop offset="1" stop-color="#3730B8"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#lg)"/><path d="M24 36.5C14.5 30 10.5 25.2 10.5 20.2c0-3.9 3-6.8 6.6-6.8 2.7 0 5.1 1.5 6.9 4 1.8-2.5 4.2-4 6.9-4 3.6 0 6.6 2.9 6.6 6.8 0 5-4 9.8-13.5 16.3z" fill="#fff" fill-opacity=".95"/><path d="M24 33c-5.6-4-8-7-8-10.3 0-1.9 1.4-3.3 3.1-3.3 1.8 0 3.5 1.3 4.9 3.7 1.4-2.4 3.1-3.7 4.9-3.7 1.7 0 3.1 1.4 3.1 3.3 0 3.3-2.4 6.3-8 10.3z" fill="#3730B8" fill-opacity=".22"/></svg>';
 
 /* Núcleo: lógica pura, sin pantalla. Funciona en el navegador (variable global NUCLEO) y en Node (module.exports).
    Reglas: el dinero va en pesos enteros; las fechas son texto AAAA-MM-DD en hora de Colombia (UTC-5, sin horario de verano). */
@@ -490,7 +490,7 @@ async function copiar(texto) {
 }
 function confeti() {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const colores = ['#E8956A', '#F2C27B', '#C4672F', '#FFFFFF', '#5EE6A0'];
+  const colores = ['#8B93F8', '#B7BCFB', '#5B52F0', '#FFFFFF', '#5EE6A0'];
   const c = h('div', { class: 'confeti', 'aria-hidden': 'true' });
   for (let i = 0; i < 70; i++) {
     const p = h('i'); p.style.left = Math.random() * 100 + '%'; p.style.background = colores[i % colores.length];
@@ -501,7 +501,7 @@ function confeti() {
 /* Vaso de cobre que se llena según el porcentaje (0 a 100). */
 function vasoSVG(pct) {
   const f = Math.max(0, Math.min(100, pct)) / 100;
-  const v = svgFijo('<svg viewBox="0 0 120 156" role="img" aria-label="Avance de la campaña"><defs><clipPath id="vc"><path d="M20 16H100L91 136Q90 146 80 146H40Q30 146 29 136Z"/></clipPath><linearGradient id="vr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F2A472"/><stop offset=".5" stop-color="#FFD7B5"/><stop offset="1" stop-color="#B85A22"/></linearGradient><linearGradient id="va" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--agua2)"/><stop offset="1" stop-color="var(--agua)"/></linearGradient></defs>' +
+  const v = svgFijo('<svg viewBox="0 0 120 156" role="img" aria-label="Avance de la campaña"><defs><clipPath id="vc"><path d="M20 16H100L91 136Q90 146 80 146H40Q30 146 29 136Z"/></clipPath><linearGradient id="vr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8B93F8"/><stop offset=".5" stop-color="#DDE0FF"/><stop offset="1" stop-color="#4B44D6"/></linearGradient><linearGradient id="va" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--agua2)"/><stop offset="1" stop-color="var(--agua)"/></linearGradient></defs>' +
     '<path d="M20 16H100L91 136Q90 146 80 146H40Q30 146 29 136Z" fill="var(--vidrio)" fill-opacity=".45" stroke="var(--vidrio)" stroke-width="2"/>' +
     '<g clip-path="url(#vc)"><g class="agua" style="transform:translateY(134px);transition:transform 1.3s cubic-bezier(.2,.8,.2,1)"><path d="M0 14Q15 8 30 14T60 14T90 14T120 14V150H0Z" fill="url(#va)"/></g></g>' +
     '<path d="M32 26L38 130" stroke="#fff" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>' +
@@ -554,10 +554,10 @@ const TARJETA = (() => {
     try { if (document.fonts && document.fonts.ready) await document.fonts.ready; } catch (e) { /* sin fuentes: se usa la del sistema */ }
     const c = document.createElement('canvas'); c.width = W; c.height = H; const x = c.getContext('2d');
     const fondo = x.createLinearGradient(0, 0, 0, H); fondo.addColorStop(0, '#10131F'); fondo.addColorStop(1, '#0A0C14'); x.fillStyle = fondo; x.fillRect(0, 0, W, H);
-    const halo = x.createRadialGradient(W / 2, 0, 0, W / 2, 0, 760); halo.addColorStop(0, 'rgba(232,149,106,.34)'); halo.addColorStop(1, 'rgba(10,12,20,0)'); x.fillStyle = halo; x.fillRect(0, 0, W, 760);
+    const halo = x.createRadialGradient(W / 2, 0, 0, W / 2, 0, 760); halo.addColorStop(0, 'rgba(139,147,248,.34)'); halo.addColorStop(1, 'rgba(10,12,20,0)'); x.fillStyle = halo; x.fillRect(0, 0, W, 760);
     x.textBaseline = 'alphabetic';
     // marca
-    const cobre = x.createLinearGradient(70, 70, 170, 170); cobre.addColorStop(0, '#F2A472'); cobre.addColorStop(1, '#B85A22');
+    const cobre = x.createLinearGradient(70, 70, 170, 170); cobre.addColorStop(0, '#6D64F5'); cobre.addColorStop(1, '#3730B8');
     x.fillStyle = cobre; redondo(x, 70, 70, 100, 100, 26); x.fill();
     x.save(); x.translate(70, 70); x.scale(100 / 48, 100 / 48); x.fillStyle = '#fff'; x.fill(new Path2D(CORAZON)); x.restore();
     x.fillStyle = '#F6F1EC'; x.font = "700 44px Sora, 'Segoe UI', system-ui, sans-serif"; x.fillText(d.marca, 196, 138);
@@ -566,25 +566,25 @@ const TARJETA = (() => {
     lineas(x, d.titulo, W - 140).slice(0, 3).forEach(l => { x.fillText(l, 70, y); y += 80; });
     // avance
     y += 30;
-    x.fillStyle = '#E8956A'; x.font = TEXTO; x.fillText('LLEVAMOS REUNIDO', 70, y); y += 120;
+    x.fillStyle = '#8B93F8'; x.font = TEXTO; x.fillText('LLEVAMOS REUNIDO', 70, y); y += 120;
     x.fillStyle = '#FFFFFF'; x.font = "800 130px Sora, 'Segoe UI', system-ui, sans-serif"; x.fillText(d.pesos(d.total), 70, y);
     y += 62; x.fillStyle = '#A5A9BC'; x.font = TEXTO; x.fillText('de ' + d.pesos(d.meta) + ' · ' + Math.min(100, Math.floor(d.meta > 0 ? d.total / d.meta * 100 : 0)) + '%', 70, y);
     y += 40; x.fillStyle = '#252B42'; redondo(x, 70, y, 940, 36, 18); x.fill();
     const lleno = Math.max(0, Math.min(1, d.meta > 0 ? d.total / d.meta : 0));
-    if (lleno > 0) { const b = x.createLinearGradient(70, 0, 1010, 0); b.addColorStop(0, '#F2A472'); b.addColorStop(1, '#C4672F'); x.fillStyle = b; redondo(x, 70, y, Math.max(36, 940 * lleno), 36, 18); x.fill(); }
+    if (lleno > 0) { const b = x.createLinearGradient(70, 0, 1010, 0); b.addColorStop(0, '#8B93F8'); b.addColorStop(1, '#4B44D6'); x.fillStyle = b; redondo(x, 70, y, Math.max(36, 940 * lleno), 36, 18); x.fill(); }
     // datos
     y += 110; x.fillStyle = '#F6F1EC'; x.font = TEXTO;
     const dias = d.vencida ? 'Plazo terminado' : (d.dias === null || d.dias === undefined ? '' : (d.dias === 0 ? 'Hoy es el último día' : d.dias === 1 ? 'Queda 1 día' : 'Quedan ' + d.dias + ' días'));
     const datos = [d.aportes + (d.aportes === 1 ? ' aporte' : ' aportes'), d.faltante > 0 ? 'faltan ' + d.pesos(d.faltante) : '¡meta lograda!', dias].filter(Boolean).join('   ·   ');
     lineas(x, datos, W - 140).forEach(l => { x.fillText(l, 70, y); y += 52; });
     // mensaje
-    y += 28; x.fillStyle = '#F2C27B'; x.font = "700 44px Sora, 'Segoe UI', system-ui, sans-serif";
+    y += 28; x.fillStyle = '#B7BCFB'; x.font = "700 44px Sora, 'Segoe UI', system-ui, sans-serif";
     lineas(x, 'Desde $5.000 ya sumas. De a poquito se logra.', W - 140).forEach(l => { x.fillText(l, 70, y); y += 58; });
     // enlace y QR
     const caja = 280, base = H - 70 - caja;
-    x.fillStyle = '#141826'; redondo(x, 70, base, 940, caja, 30); x.fill(); x.strokeStyle = '#E8956A'; x.lineWidth = 3; x.setLineDash([14, 10]); redondo(x, 70, base, 940, caja, 30); x.stroke(); x.setLineDash([]);
+    x.fillStyle = '#141826'; redondo(x, 70, base, 940, caja, 30); x.fill(); x.strokeStyle = '#8B93F8'; x.lineWidth = 3; x.setLineDash([14, 10]); redondo(x, 70, base, 940, caja, 30); x.stroke(); x.setLineDash([]);
     const anchoTexto = d.qr ? 560 : 860;
-    x.fillStyle = '#E8956A'; x.font = TEXTO; x.fillText('Aporta o comparte aquí:', 105, base + 60);
+    x.fillStyle = '#8B93F8'; x.font = TEXTO; x.fillText('Aporta o comparte aquí:', 105, base + 60);
     x.fillStyle = '#F6F1EC'; x.font = MONO;
     lineasLargas(x, d.enlace.replace(/^https?:\/\//, ''), anchoTexto).slice(0, 5).forEach((l, i) => x.fillText(l, 105, base + 112 + i * 40));
     if (d.qr) {
