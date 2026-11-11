@@ -181,6 +181,27 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
 @media (prefers-reduced-motion:reduce){.barra>i{transition:none}.confeti{display:none}}
 @media (max-width:420px){.datos3{grid-template-columns:1fr 1fr 1fr;gap:6px}.dato b{font-size:17px}.reloj b{font-size:21px}.tarjeta{padding:16px}}
 
+/* ===== Estilo futurista (dos variantes; se elige con data-estilo="a|b" en <html>) ===== */
+:root[data-estilo]{--cristal:rgba(20,24,44,.55);--brillo:rgba(139,147,248,.35)}
+:root[data-estilo] .tarjeta{background:var(--cristal);-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%);border:1px solid var(--brillo);box-shadow:0 0 0 1px rgba(255,255,255,.04) inset,0 10px 40px rgba(55,48,184,.25)}
+:root[data-estilo] .dato,:root[data-estilo] .reloj div{background:rgba(139,147,248,.08);border-color:var(--brillo)}
+:root[data-estilo] .btn.primario{box-shadow:0 0 22px rgba(91,82,240,.55),0 0 0 1px rgba(255,255,255,.12) inset}
+:root[data-estilo] .cifra-grande{text-shadow:0 0 28px rgba(139,147,248,.55)}
+:root[data-estilo] .barra{box-shadow:0 0 18px rgba(91,82,240,.35)}
+:root[data-estilo] .barra>i{box-shadow:0 0 16px rgba(139,147,248,.9)}
+:root[data-estilo] .reloj b{text-shadow:0 0 14px rgba(139,147,248,.8)}
+:root[data-estilo] .retrato{box-shadow:0 0 0 8px var(--acc-soft),0 0 40px rgba(91,82,240,.6)}
+:root[data-estilo] .vaso svg{filter:drop-shadow(0 0 18px rgba(91,82,240,.7))}
+/* A «Aurora»: luces de color que flotan despacio */
+:root[data-estilo=a] body::before{height:100%;position:fixed;background:radial-gradient(40% 30% at 15% 10%,rgba(91,82,240,.45),transparent 70%),radial-gradient(35% 28% at 85% 25%,rgba(0,200,255,.22),transparent 70%),radial-gradient(45% 35% at 50% 95%,rgba(139,92,246,.35),transparent 70%);animation:aurora 14s ease-in-out infinite alternate}
+@keyframes aurora{from{transform:translate3d(-3%,-2%,0) scale(1)}to{transform:translate3d(3%,3%,0) scale(1.12)}}
+/* B «Neón»: cuadrícula tipo circuito y bordes de luz */
+:root[data-estilo=b] body{background-image:linear-gradient(rgba(139,147,248,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(139,147,248,.07) 1px,transparent 1px);background-size:36px 36px}
+:root[data-estilo=b] body::before{height:100%;position:fixed;background:radial-gradient(45% 30% at 12% 8%,rgba(91,82,240,.4),transparent 70%),radial-gradient(40% 28% at 88% 22%,rgba(0,200,255,.2),transparent 70%);animation:aurora 16s ease-in-out infinite alternate}
+:root[data-estilo=b] .tarjeta{border-color:rgba(0,200,255,.45);box-shadow:0 0 24px rgba(0,200,255,.18),0 0 0 1px rgba(255,255,255,.04) inset}
+:root[data-estilo=b] .kicker,:root[data-estilo=b] .etq{color:#5ED8FF}
+@media (prefers-reduced-motion:reduce){:root[data-estilo=a] body::before{animation:none}}
+
 </style>
 </head>
 <body>
@@ -192,7 +213,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
 <noscript><p style="padding:20px">Esta página necesita JavaScript activado para funcionar.</p></noscript>
 <script>
 /* Energía Peñuela — familia — versión 1.0 — construida el 2026-11-10 */
-const BUILD = {"modo":"nube","opcion":"A","opcionPorUrl":false,"firebase":{"apiKey":"AIzaSyAd6TZipDlbLp9m9llAcfUg4AHhjSGkOAg","authDomain":"energia-penuela.firebaseapp.com","projectId":"energia-penuela","storageBucket":"energia-penuela.firebasestorage.app","messagingSenderId":"202230602280","appId":"1:202230602280:web:d1532cff515d28e56c331d"},"sitio":"https://davidp0220.github.io/energia-penuela/","version":"1.0","fecha":"2026-11-10"};
+const BUILD = {"modo":"nube","opcion":"A","opcionPorUrl":false,"estilo":"b","firebase":{"apiKey":"AIzaSyAd6TZipDlbLp9m9llAcfUg4AHhjSGkOAg","authDomain":"energia-penuela.firebaseapp.com","projectId":"energia-penuela","storageBucket":"energia-penuela.firebasestorage.app","messagingSenderId":"202230602280","appId":"1:202230602280:web:d1532cff515d28e56c331d"},"sitio":"https://davidp0220.github.io/energia-penuela/","version":"1.0","fecha":"2026-11-10"};
 /* Opciones de nombre y aspecto (David escoge con el ojo). El constructor define BUILD antes de este archivo:
    BUILD = { modo:'local'|'nube', opcion:'A'|'B', opcionPorUrl:bool, firebase:{...}|null, sitio:'https://…/', version, fecha }.
    Nada personal va aquí: la historia, el nombre de Nonita, las cuentas de pago y los aportes viven en la base de datos, no en el código. */
@@ -205,6 +226,7 @@ const CONFIG = (() => {
   if (BUILD.opcionPorUrl) { try { const o = new URLSearchParams(location.search).get('opcion'); if (OPCIONES[o]) opcion = o; } catch (e) { /* sin URL */ } }
   const o = OPCIONES[opcion] || OPCIONES.A;
   document.documentElement.setAttribute('data-tema', o.tema);
+  { let e = BUILD.estilo || 'a'; if (!BUILD.firebase) { try { const q = new URLSearchParams(location.search).get('estilo'); if (q === 'a' || q === 'b' || q === 'n') e = q; } catch (x) { /* sin URL */ } } if (e !== 'n') document.documentElement.setAttribute('data-estilo', e); }
   return Object.assign({ opcion, modo: BUILD.modo, firebase: BUILD.firebase, sitio: BUILD.sitio, version: BUILD.version, fecha: BUILD.fecha }, o);
 })();
 
